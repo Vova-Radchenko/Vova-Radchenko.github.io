@@ -504,7 +504,7 @@ $(document).ready(function () {
 
     $('#four4').click(function () {
 
-        if (cat != 'img/dog4.jpg') {
+        if (cat != 'img/dog4.jpg' && cat != '') {
             $('#fourth_step').removeClass('block');
             $('#fourth_step').addClass('none');
             $('#final_step').removeClass('none');
