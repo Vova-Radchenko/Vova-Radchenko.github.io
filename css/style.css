@@ -1,0 +1,265 @@
+* {
+  outline: none;
+}
+.bold {
+  font-weight: bold;
+}
+.orange {
+  color: #ff9800;
+}
+.shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.orangeShadow {
+  box-shadow: 0 0 10px 3px #ff9800;
+}
+#load {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: url(../img/ajax-loader.gif);
+  width: 43px;
+  height: 11px;
+  text-indent: -9999em;
+}
+body {
+  background-color: #f5f5f5 !important;
+}
+body .block {
+  display: block;
+}
+body .none {
+  display: none;
+}
+body .container {
+  width: 75%;
+  background-color: #f5f5f5;
+  min-height: 600px;
+  margin-top: 130px !important;
+}
+body .container .finalCard {
+  width: 600px;
+  height: 243px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 32px;
+}
+body .container .finalCard .text {
+  float: left;
+  width: auto;
+  height: 100%;
+  margin-left: 15px;
+}
+body .container .finalCard .textSocial {
+  margin-top: 60px;
+}
+body .container .finalCard .name {
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+body .container .finalCard .email {
+  float: left;
+  font-size: 15px;
+  color: #A9A9A9;
+}
+body .container .finalCard .city {
+  float: left;
+  margin-top: 20px;
+}
+body .container .finalCard .social {
+  float: left;
+  color: lightblue;
+}
+body .container .finalCard .social span {
+  color: #A9A9A9;
+}
+body .container .finalCard .catImg {
+  float: right;
+  width: 200px;
+  height: 195px;
+  margin-top: 24px;
+  margin-right: 24px;
+}
+body .container .finalCard .catImg img {
+  width: 200px;
+  height: 195px;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+body .container .select {
+  min-width: 200px;
+  min-height: 30px;
+}
+body .container .numbers {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 16px;
+}
+body .container .numbers .numb {
+  float: left;
+  margin-left: 10px;
+  border: 1px solid silver;
+  border-radius: 4px;
+  font-size: 1.7em;
+  font-family: Open Sans, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  width: 35px;
+  height: 35px;
+}
+body .container .form h3 {
+  font-family: Open Sans, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding-top: 0px;
+  display: block;
+}
+body .container .form #logo1 {
+  color: red;
+}
+body .container .form #logo2 {
+  color: red;
+}
+body .container .form #logo2_1 {
+  color: red;
+}
+body .container .form #logo3 {
+  color: red;
+}
+body .container .form #logo4 {
+  color: red;
+}
+body .container .form span {
+  color: red;
+}
+body .container .form .findCat {
+  width: 100%;
+  height: 200px;
+}
+body .container .form .findCat .imgCat {
+  width: 440px;
+  height: 380px;
+  text-align: center;
+}
+body .container .form .findCat .imgCat div {
+  float: left;
+  color: red;
+  margin-left: 10px;
+}
+body .container .form .findCat .imgCat .imgCatDivNo {
+  visibility: hidden;
+}
+body .container .form .findCat .imgCat .imgCatDiv {
+  visibility: visible;
+}
+body .container .form .findCat img {
+  width: 100px;
+  height: 95px;
+  float: left;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+body .container .form .findCat img:focus {
+  border: 2px solid red;
+}
+body .container .form .facebookin {
+  visibility: hidden;
+}
+body .container .form #facebook:checked ~ .facebookin {
+  visibility: visible;
+}
+body .container .form .vkin {
+  visibility: hidden;
+}
+body .container .form #vk:checked ~ .vkin {
+  visibility: visible;
+}
+body .container .form .twitterin {
+  visibility: hidden;
+}
+body .container .form #twitter:checked ~ .twitterin {
+  visibility: visible;
+}
+body .container .form .odin {
+  visibility: hidden;
+}
+body .container .form #od:checked ~ .odin {
+  visibility: visible;
+}
+body .container .form .inputBlock {
+  width: 350px;
+  height: 150px;
+  background: lightblue;
+  margin-left: 130px;
+  background: #f5f5f5;
+}
+body .container .form .inputBlock label {
+  float: left;
+  margin-left: 20px;
+}
+body .container .form .inputBlock .check {
+  float: left;
+}
+body .container .form i {
+  color: #ff9800;
+}
+body .container .form .ico_1 {
+  left: 20px;
+}
+body .container .form .ico_2 {
+  right: 20px;
+}
+body .container .form select {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid silver;
+  padding: 3px;
+  margin-left: 0px;
+}
+body .container .form input {
+  margin-bottom: 10px;
+}
+body .container .form form input {
+  border-radius: 5px;
+  border: 2px solid silver;
+  padding: 3px;
+  margin-left: 0px;
+}
+body .container .form .button {
+  border-radius: 5px;
+  border: 2px solid silver;
+  padding: 3px;
+  margin-left: 0px;
+  color: #ff9800;
+  background-color: white;
+}
+body .container .form .buttonFinal {
+  border-radius: 5px;
+  border: 2px solid silver;
+  padding: 3px;
+  margin-left: 0px;
+  color: white;
+  background-color: #ff9800;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+body .container .form .btn_1 {
+  padding-left: 25px;
+  padding-right: 5px;
+}
+body .container .form .btn_2 {
+  padding-right: 25px;
+  padding-left: 5px;
+}
+body .container .form button:focus {
+  border: 2px solid #FF5F5F;
+}
+body .container .form form input:focus {
+  border: 2px solid #FF5F5F;
+}
+body .container .form .first {
+  margin-bottom: 16px;
+}

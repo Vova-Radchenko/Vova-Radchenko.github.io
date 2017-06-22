@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	    <title>Test task</title>
+	    <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body ng-app="registration" ng-controller="RegistrController as ctrl">
+
+	<center>
+
+		<!-- 1 -->
+
+		<div class="container block" id="index">
+                <center id="center">
+                    <div class="numbers">
+                        <div class="one numb bold">1</div>
+                        <div class="two numb">2</div>
+                        <div class="three numb">3</div>
+                        <div class="four numb">4</div>
+                    </div>
+
+                    <div class="form">
+                        <form ng-submit="ctrl.submit1()">
+                            <h3>1. Введите имя и e-mail</h3>
+                            <input id="name" type="text" class="first" ng-model="ctrl.editor1.name" required placeholder="Имя"><br>
+                            <input id="email" type="email" class="second" ng-model="ctrl.editor1.email" placeholder="test@mail.net" required><br>
+                            <div id="logo1" class="none">Введите имя!!!</div>
+                            <div id="logo2" class="none">Введите e-mail!!!</div>
+                            <div id="logo2_1" class="none">Введите e-mail правильно!!!</div>
+                            
+                            <i class="glyphicon glyphicon-chevron-left ico_1"></i><input class="button btn_1" type="button"  value="Предыдущий">
+                            <!-- <input id="one1" class="button btn_2" type="submit" value="Следующий" onclick="location.href='second_step.html'"><i class="glyphicon glyphicon-chevron-right ico_2"></i> -->
+                            <input id="one1" class="button btn_2" type="submit" value="Следующий"><i class="glyphicon glyphicon-chevron-right ico_2"></i>
+                        </form>
+                    </div>
+                </center>
+            </div>
+
+            <!-- 2 -->
+
+            <div class="container none" id="second_step">
+                <center>
+                    <div class="numbers">
+                        <div id="fromTwoToOne" class="one numb orange">1</div>
+                        <div class="two numb bold">2</div>
+                        <div class="three numb">3</div>
+                        <div class="four numb">4</div>
+                    </div>
+
+                    <div class="form">
+                        <h3>2. Выберите страну и город</h3>
+                        <form  ng-submit="ctrl.submit2()">
+                            <select id="countries" class="select" ng-model="ctrl.editor2.country" onchange="showNames(this.value)">
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="Germany">Germany</option>
+                                <option value="France">France</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Sweden">Sweden</option>
+                                <option value="USA">USA</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Moldova">Moldova</option>
+                                <option value="Belarus">Belarus</option>
+                                <option value="Poland">Poland</option>
+                            </select><br>
+                            <select id="cities" class="select" ng-model="ctrl.editor2.city">
+                                
+                            </select><br>
+                            <div id="logo3" class="none">Введите страну!!!</div>
+                            <div id="logo4" class="none">Введите город!!!</div>
+
+                            <i class="glyphicon glyphicon-chevron-left ico_1"></i><input id="two2Back" class="button btn_1" type="button" value="Предыдущий">
+                            <!-- <input id="two2" class="button btn_2" type="submit" value="Следующий" onclick="location.href='third_step.html'"><i class="glyphicon glyphicon-chevron-right ico_2"></i> -->
+                            <input id="two2" class="button btn_2" type="submit" value="Следующий"><i class="glyphicon glyphicon-chevron-right ico_2"></i>
+                        </form>
+                    </div>
+                </center>
+            </div>
+
+            <!-- 3 -->
+
+            <div class="container none" id="third_step">
+                <center id="center">
+                    <div class="numbers">
+                        <div id="fromThreeToOne" class="one numb orange">1</div>
+                        <div id="fromThreeToTwo" class="two numb orange">2</div>
+                        <div class="three numb bold">3</div>
+                        <div class="four numb">4</div>
+                    </div>
+
+                    <div class="form">
+                        <form ng-submit="ctrl.submit3()">
+                            
+
+                            <h3>3. Отметьте социальные сети</h3>
+
+                            <div class="inputBlock">
+                                <input type="checkbox" class="check" id="facebook"><label for="facebook">Facebook</label>
+                                <input type="text" ng-model="ctrl.editor3.facebook" class="facebookin right" placeholder="fb.com/lun"><br>
+                                <input type="checkbox" class="check" id="vk"><label for="vk">Вконтакте</label>
+                                <input type="text" ng-model="ctrl.editor3.vk" class="vkin right" placeholder="vk.com/lun"><br>
+                                <input type="checkbox" class="check" id="twitter"><label for="twitter">Twitter</label>
+                                <input type="text" ng-model="ctrl.editor3.twitter" class="twitterin right" placeholder="Ваша страница в Twitter"><br>
+                                <input type="checkbox" class="check" id="od"><label for="od">Одноклассники</label>
+                                <input type="text" ng-model="ctrl.editor3.od" class="odin right" placeholder="od.ru/lun"><br>
+                            </div>
+                            <br>
+                            
+                            <i class="glyphicon glyphicon-chevron-left ico_1"></i><input id="three3Back" class="button btn_1" type="button"  value="Предыдущий">
+                            <!-- <input id="three3" class="button btn_2" type="submit" value="Следующий" onclick="location.href='fourth_step.html'"><i class="glyphicon glyphicon-chevron-right ico_2"></i> -->
+                            <input id="three3" class="button btn_2" type="submit" value="Следующий"><i class="glyphicon glyphicon-chevron-right ico_2"></i>
+                        </form>
+                    </div>
+                </center>
+            </div>
+
+            <!-- 4 -->
+
+            <div class="container none" id="fourth_step">
+                <center id="center">
+                    <div class="numbers">
+                        <div id="fromFourToOne" class="one numb orange">1</div>
+                        <div id="fromFourToTwo" class="two numb orange">2</div>
+                        <div id="fromFourToThree" class="three numb orange">3</div>
+                        <div class="four numb bold">4</div>
+                    </div>
+
+                    <div class="form">
+                        <form>
+                            <div class="findCat">
+                                <h3>4. Выберите любимого котика</h3>
+                                <div class="imgCat">
+                                    <img id="cat1" src="img/cat1.jpg" alt="cat2" class="shadow">
+                                    <img id="cat2" src="img/cat2.jpg" alt="cat2" class="shadow">
+                                    <img id="cat3" src="img/cat3.jpg" alt="cat3" class="shadow">
+                                    <img id="dog" src="img/dog4.jpg" alt="dog" class="shadow">
+                                    <div id="noDog" class="imgCatDivNo">Вы выбрали собачку. А надо котика.</div>
+                                </div>
+                                <!--<span>Вы выбрали собачку. А надо котика.</span>-->
+                            </div>
+                            
+                                                  
+                            <i class="glyphicon glyphicon-chevron-left ico_1"></i><input id="four4Back" class="button btn_1" type="button"  value="Предыдущий">
+                            <!-- <input id="four4" class="buttonFinal" type="button" value="Завершить" onclick="location.href='final_step.html'"> -->
+                            <input id="four4" class="buttonFinal" type="button" value="Завершить">
+                        </form>
+                    </div>
+                </center>
+            </div>
+
+            <!-- final -->
+
+            <div class="container none" id="final_step">
+                <center id="center">
+                    <!--<div class="numbers">
+                        <div class="one numb bold">1</div>
+                        <div class="two numb">2</div>
+                        <div class="three numb">3</div>
+                        <div class="four numb">4</div>
+                    </div>-->
+
+                    <div class="finalCard">
+                        <div class="text">
+                            <div class="name">{{ctrl.editor1.name}}</div><br>
+                            <div class="email">{{ctrl.editor1.email}}</div><br>
+                            <!-- <div class="city">{{crtl.city}}, {{ctrl.editor2.country}}</div><br> -->
+                            <div class="city"></div><br>
+                            <div class="textSocial">
+                                <!-- <div id="facebook" class="social">Facebook: <span>{{ctrl.editor3.facebook}}</span></div><br>
+                                <div id="vk" class="social">Вконтакте: <span>{{ctrl.editor3.vk}}</span></div><br>
+                                <div id="twitter" class="social">Twitter: <span>{{ctrl.editor3.twitter}}</span></div><br>
+                                <div id="od" class="social">Одноклассники: <span>{{ctrl.editor3.od}}</span></div><br> -->
+                                <div id="facebookLast" class="social">Facebook: <span></span></div><br id="facebookBr">
+                                <div id="vkLast" class="social block">Вконтакте: <span></span></div><br id="vkBr">
+                                <div id="twitterLast" class="social">Twitter: <span></span></div><br id="twitterBr">
+                                <div id="odLast" class="social">Одноклассники: <span></span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="catImg"><img class="shadow" alt="cat" src=""></div>
+                        <!-- <img src="{{ctrl.masiv[0]}}"> -->
+                    </div>
+
+                    <div class="form">
+                        <form>
+                            <!--<h3>1. Введите имя и e-mail</h3>
+                            <input type="text" class="first" required placeholder="Имя"><br>
+                            <input type="email" class="second" placeholder="test@mail.net" required><br>
+                            
+                            <i class="glyphicon glyphicon-chevron-left ico_1"></i><input class="button btn_1" type="button"  value="Предыдущий">-->
+                            <!-- <input id="goToOne" class="buttonFinal" type="button" value="Пройти заново" onclick="location.href='index.html'"> -->
+                            <input id="goToOne" class="buttonFinal" type="button" value="Пройти заново">
+                        </form>
+                    </div>
+                </center>
+            </div>
+	</center>
+
+	<script src="script.js"></script>
+</body>
+</html>
